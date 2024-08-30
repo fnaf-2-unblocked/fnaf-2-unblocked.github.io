@@ -1,0 +1,332 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>&#128059; FNAF 2 Unblocked</title>
+<meta name="Description" content="✔️ FNAF 2 Unblocked - Play Five Nights at Freddy's 2 Unblocked game for free online!" />
+<meta name="Keywords" content="FNAF 2 Unblocked,FNAF GAMES,Five nights at Freddy's" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+@import"style.css";
+</style><!--[if IE]>
+<style type="text/css"> 
+.gamesTemplate #mainContent { zoom: 1;}
+</style><![endif]-->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<meta property="og:title" content="FIVE NIGHTS AT FREDDY'S (FNAF) GAMES">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.freddy-fnaf.com/screenshots/online/fnaf-6-game.jpg">
+<meta property="og:url" content="https://www.freddy-fnaf.com">
+<meta property="og:description" content="✔️ FNAF 2 Unblocked - Play Five Nights at Freddy's 2 Unblocked game for free online!">
+<link rel="image_src" href="https://www.freddy-fnaf.com/screenshots/online/fnaf-6-game.jpg">
+
+</head>
+
+<body class="gamesTemplate">
+<!--container-->
+<div id="container">
+ 
+  <div id="header">
+	<!--<a href="/"><img src="/images/.png" height="75" border="0" align=left /></a>-->
+	<!--<h1>FREDDY</h1>-->
+	<a href="/" title="Five Nights at Freddy's games"><img src="/freddy.jpg" alt="Five Nights at Freddy's games" /></a>
+	<!--<a href="/"><img src="/images/.png" height="75" border="0" align=right /></a>-->
+  </div> 
+
+  <div id="menu">
+	<ul>
+	  <li><a href="/">Main Page</a></li>
+      	  <li><a href="/">Online Games</a></li>
+	  <li><a href="/download/">Download</a></li>
+	  <!--<li><a href="/howtoplay.html">How to play</a></li>-->
+	</ul>
+  </div>  
+     <!--<div class="subnav">&nbsp;</div>-->
+ 	
+     <div class="gallery">
+     <p>
+<div>
+<div id="slider" class="slider" style="float: left">
+    <ol class="slider__indicators">
+      <li class="slider__indicator slider__indicator_active" data-slide-to="0"></li>
+      <li class="slider__indicator" data-slide-to="1"></li>
+      <li class="slider__indicator" data-slide-to="2"></li>
+      <li class="slider__indicator" data-slide-to="3"></li>
+      
+    </ol>
+    <div class="slider__items">
+
+  <a href="https://www.freddy-fnaf.com/online/five-nights-at-freddys-help-wanted.html">
+      <div class="slider__item slider__item_active">
+  <img src="https://www.freddy-fnaf.com/screenshots/online/five-nights-at-freddys-help-wanted.jpg" alt="c1">
+      </div>
+  </a>
+
+	<a href="https://www.freddy-fnaf.com/online/new-fnaf.html">
+      <div class="slider__item">
+	<img src="https://www.freddy-fnaf.com/screenshots/online/new-fnaf.jpg" alt="c1">
+      </div>
+	</a>
+
+	<a href="https://www.freddy-fnaf.com/online/fnaf-6-game.html">
+      <div class="slider__item">
+	<img src="https://www.freddy-fnaf.com/screenshots/online/fnaf-6-game.jpg" alt="c1">
+      </div>
+	</a>
+
+	<a href="https://www.freddy-fnaf.com/online/freddy-4.html">
+      <div class="slider__item">
+        <img src="https://www.freddy-fnaf.com/screenshots/online/freddy-4.jpg" alt="c1">
+      </div>
+	</a>
+
+
+    </div>
+    <a class="slider__control slider__control_prev" href="#" role="button"></a>
+    <a class="slider__control slider__control_next" href="#" role="button"></a>
+  </div> 
+
+
+<div style="float :right">
+
+</div>
+</div>
+<div style="clear: both"></div>
+
+
+<script>
+'use strict';
+var slider = (function (config) {
+
+  const ClassName = {
+    INDICATOR_ACTIVE: 'slider__indicator_active',
+    ITEM: 'slider__item',
+    ITEM_LEFT: 'slider__item_left',
+    ITEM_RIGHT: 'slider__item_right',
+    ITEM_PREV: 'slider__item_prev',
+    ITEM_NEXT: 'slider__item_next',
+    ITEM_ACTIVE: 'slider__item_active'
+  }
+
+  var
+    _isSliding = false, // 
+    _interval = 0, // 
+    _transitionDuration = 700, // 
+    _slider = {}, // 
+    _items = {}, // 
+    _sliderIndicators = {}, // 
+    _config = {
+      selector: '', // 
+      isCycling: true, //
+      direction: 'next', // 
+      interval: 5000, // 
+      pause: true // 
+    };
+
+  var
+    // 
+    _getItemIndex = function (_currentItem) {
+      var result;
+      _items.forEach(function (item, index) {
+        if (item === _currentItem) {
+          result = index;
+        }
+      });
+      return result;
+    },
+    // 
+    _setActiveIndicator = function (_activeIndex, _targetIndex) {
+      if (_sliderIndicators.length !== _items.length) {
+        return;
+      }
+      _sliderIndicators[_activeIndex].classList.remove(ClassName.INDICATOR_ACTIVE);
+      _sliderIndicators[_targetIndex].classList.add(ClassName.INDICATOR_ACTIVE);
+    },
+
+    // 
+    _slide = function (direction, activeItemIndex, targetItemIndex) {
+      var
+        directionalClassName = ClassName.ITEM_RIGHT,
+        orderClassName = ClassName.ITEM_PREV,
+        activeItem = _items[activeItemIndex], // 
+        targetItem = _items[targetItemIndex]; // 
+
+      var _slideEndTransition = function () {
+        activeItem.classList.remove(ClassName.ITEM_ACTIVE);
+        activeItem.classList.remove(directionalClassName);
+        targetItem.classList.remove(orderClassName);
+        targetItem.classList.remove(directionalClassName);
+        targetItem.classList.add(ClassName.ITEM_ACTIVE);
+        window.setTimeout(function () {
+          if (_config.isCycling) {
+            clearInterval(_interval);
+            _cycle();
+          }
+          _isSliding = false;
+          activeItem.removeEventListener('transitionend', _slideEndTransition);
+        }, _transitionDuration);
+      };
+
+      if (_isSliding) {
+        return; // 
+      }
+      _isSliding = true; // 
+
+      if (direction === "next") { // 
+        directionalClassName = ClassName.ITEM_LEFT;
+        orderClassName = ClassName.ITEM_NEXT;
+      }
+
+      targetItem.classList.add(orderClassName); // у
+      _setActiveIndicator(activeItemIndex, targetItemIndex); //
+
+      window.setTimeout(function () { // 
+        targetItem.classList.add(directionalClassName);
+        activeItem.classList.add(directionalClassName);
+        activeItem.addEventListener('transitionend', _slideEndTransition);
+      }, 0);
+
+    },
+    // 
+    _slideTo = function (direction) {
+      var
+        activeItem = _slider.querySelector('.' + ClassName.ITEM_ACTIVE), // 
+        activeItemIndex = _getItemIndex(activeItem), // 
+        lastItemIndex = _items.length - 1, // 
+        targetItemIndex = activeItemIndex === 0 ? lastItemIndex : activeItemIndex - 1;
+      if (direction === "next") { //
+        targetItemIndex = activeItemIndex == lastItemIndex ? 0 : activeItemIndex + 1;
+      }
+      _slide(direction, activeItemIndex, targetItemIndex);
+    },
+    // 
+    _cycle = function () {
+      if (_config.isCycling) {
+        _interval = window.setInterval(function () {
+          _slideTo(_config.direction);
+        }, _config.interval);
+      }
+    },
+    // 
+    _actionClick = function (e) {
+      var
+        activeItem = _slider.querySelector('.' + ClassName.ITEM_ACTIVE), // 
+        activeItemIndex = _getItemIndex(activeItem), //
+        targetItemIndex = e.target.getAttribute('data-slide-to');
+
+      if (!(e.target.hasAttribute('data-slide-to') || e.target.classList.contains('slider__control'))) {
+        return; //
+      }
+      if (e.target.hasAttribute('data-slide-to')) {//
+        if (activeItemIndex === targetItemIndex) {
+          return;
+        }
+        _slide((targetItemIndex > activeItemIndex) ? 'next' : 'prev', activeItemIndex, targetItemIndex);
+      } else {
+        e.preventDefault();
+        _slideTo(e.target.classList.contains('slider__control_next') ? 'next' : 'prev');
+      }
+    },
+    // 
+    _setupListeners = function () {
+      // 
+      _slider.addEventListener('click', _actionClick);
+      // 
+      if (_config.pause && _config.isCycling) {
+        _slider.addEventListener('mouseenter', function (e) {
+          clearInterval(_interval);
+        });
+        _slider.addEventListener('mouseleave', function (e) {
+          clearInterval(_interval);
+          _cycle();
+        });
+      }
+    };
+
+  //
+  for (var key in config) {
+    if (key in _config) {
+      _config[key] = config[key];
+    }
+  }
+  _slider = (typeof _config.selector === 'string' ? document.querySelector(_config.selector) : _config.selector);
+  _items = _slider.querySelectorAll('.' + ClassName.ITEM);
+  _sliderIndicators = _slider.querySelectorAll('[data-slide-to]');
+  // 
+  _cycle();
+  _setupListeners();
+
+  return {
+    next: function () { // 
+      _slideTo('next');
+    },
+    prev: function () { //
+      _slideTo('prev');
+    },
+    stop: function () { // 
+      clearInterval(_interval);
+    },
+    cycle: function () { // 
+      clearInterval(_interval);
+      _cycle();
+    }
+  }
+}({
+  selector: '.slider',
+  isCycling: true,
+  direction: 'next',
+  interval: 2000,
+  pause: true
+}));
+</script>
+
+
+
+<div style="text-align: center">
+<iframe src="https://run3.io/popgame/fnaf/fnaf2.html" width=600 height=460 ></iframe>
+</div>
+
+<div class="mpog">
+<h2 style="text-align: center">FNAF GAMES</h2>
+
+		<div style="float: left; margin: 10px 14px 5px 0px; width: 163px; height: 206px">
+                    <div itemscope itemtype="https://www.schema.org/PlayAction"><a itemprop="url" href="/online/fnaf-web.html" style="text-decoration: none" title="FNAF Web"><b itemprop="name">FNAF Web</b></a><br />
+			<a href="/online/fnaf-web.html" title="FNAF Web"><img style="text-align: left; padding: 1px; border: 1px #fff solid" src="/screenshots/online/fnaf-web.jpg" alt="FNAF Web" /></a>
+                         <!--<div class="main_page_game_desc" itemprop="description"> intro </div>-->
+ 			 
+			
+                                <div id="raiting_star">
+                                    <!--  <div id="raiting" style="cursor: auto;" >  -->
+										<!--<div style="cursor: auto;" >-->
+                                        <div id="raiting_blank"></div> 
+                                        <div id="raiting_hover"></div> 
+                                        <div id="raiting_votes" style="width: 81.6px;"></div> 
+                                    </div>
+                                    <!--<div id="raiting_info" style="display: block;"><h3>Rating:  <b>4,8</b></h3></div>-->
+                                <!--</div>-->
+                    </div>         
+		</div>		
+
+</div>
+<div style="clear: both"></div>
+	
+</div>
+   	
+<br class="clearfloat" />
+
+</div>
+
+  <br />
+  <div id="footer">
+    <p>&copy; Fnaf-2 Game 2024. All games and images are copyright to their respective owners.</p> 
+      <p><a rel="nofollow" href="privacy-policy.htm">Privacy Policy</a></p>
+  </div>
+</div>
+
+
+    
+
+</body>
+</html>
