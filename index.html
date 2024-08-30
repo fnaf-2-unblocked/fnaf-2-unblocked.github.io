@@ -26,52 +26,35 @@
 <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
+ 
+  
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+   
         }
 
-        .game-icon {
-            width: 100px;
-            height: 100px;
-            background-image: url('game-icon.png'); /* Путь к вашей иконке */
-            background-size: cover;
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .fullscreen-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-        }
-
-        .fullscreen-overlay iframe {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            height: 80%;
+        iframe {
+            width: 720px;
+            height: 560px;
             border: none;
         }
 
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 24px;
+        .fullscreen-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
             color: white;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
-            z-index: 1001;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .fullscreen-button:hover {
+            background-color: #0056b3;
         }
     </style>
 	
@@ -110,20 +93,22 @@
 
 
 
-<div class="game-icon" onclick="openGame()"></div>
+<iframe src="https://run3.io/popgame/fnaf/fnaf2.html" id="gameFrame" allowtransparency="true" allowfullscreen></iframe>
 
-<div class="fullscreen-overlay" id="fullscreenOverlay">
-    <span class="close-btn" onclick="closeGame()">✖</span>
-    <iframe src="https://run3.io/popgame/fnaf/fnaf2.html" allowtransparency="true" allowfullscreen></iframe>
-</div>
+<button class="fullscreen-button" onclick="toggleFullScreen()">Full screen</button>
 
 <script>
-    function openGame() {
-        document.getElementById('fullscreenOverlay').style.display = 'block';
-    }
-
-    function closeGame() {
-        document.getElementById('fullscreenOverlay').style.display = 'none';
+    function toggleFullScreen() {
+        const iframe = document.getElementById('gameFrame');
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) { // Firefox
+            iframe.mozRequestFullScreen();
+        } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari and Opera
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) { // IE/Edge
+            iframe.msRequestFullscreen();
+        }
     }
 </script>
 
