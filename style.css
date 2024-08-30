@@ -261,10 +261,12 @@ h1 {
 h2 {
 	letter-spacing: 0px;
 	font-size: 16px;
+	text-align: left;
 }
 
 h3 {
 	font-size: 14px;
+	text-align: left;
 }
 
 a

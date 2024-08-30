@@ -22,6 +22,59 @@
 <meta property="og:description" content="✔️ FNAF 2 Unblocked - Play Five Nights at Freddy's 2 Unblocked game for free online!">
 <link rel="image_src" href="https://fnaf-2-unblocked.github.io/screenshots/online/fnaf-6-game.jpg">
 
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .game-icon {
+            width: 100px;
+            height: 100px;
+            background-image: url('game-icon.png'); /* Путь к вашей иконке */
+            background-size: cover;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .fullscreen-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+        }
+
+        .fullscreen-overlay iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            border: none;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            z-index: 1001;
+        }
+    </style>
+	
 </head>
 
 <body class="gamesTemplate">
@@ -54,7 +107,28 @@
 <h1>FNAF 2 Unblocked</h1>
 
 <div style="text-align: center">
-<iframe src="https://run3.io/popgame/fnaf/fnaf2.html" width="720" height="560" allowtransparency="true" width="700" height="600" frameborder="0" allowfullscreen ></iframe>
+
+
+
+<div class="game-icon" onclick="openGame()"></div>
+
+<div class="fullscreen-overlay" id="fullscreenOverlay">
+    <span class="close-btn" onclick="closeGame()">✖</span>
+    <iframe src="https://run3.io/popgame/fnaf/fnaf2.html" allowtransparency="true" allowfullscreen></iframe>
+</div>
+
+<script>
+    function openGame() {
+        document.getElementById('fullscreenOverlay').style.display = 'block';
+    }
+
+    function closeGame() {
+        document.getElementById('fullscreenOverlay').style.display = 'none';
+    }
+</script>
+
+
+
 </div>
 
 <div class="mpog">
@@ -86,7 +160,7 @@
 <br class="clearfloat" />
 
 
-<div style="margin-left:25px; width: 705px" id="sidebar1">
+<div style="margin-left:25px; width: 705px; margin-bottom: 20px" id="sidebar1">
   <div class="sidebar1_content">
   
 <h2>Game Overview</h2>
@@ -112,52 +186,52 @@ The end of the game is very interesting there you put on a mask and around you a
 
 <h2>Controls for Five Nights at Freddy's 2</h2>
 
-<h3>Basic Controls:</h3>
+<h3>Basic Controls</h3>
 <ul>
-    <li><strong>Mouse:</strong> Used to interact with most elements on the screen, including the cameras, lights, and mask.</li>
-    <li><strong>Mouse Cursor:</strong> Move the cursor to interact with buttons and objects.</li>
+    <li><strong>Mouse - </strong> Used to interact with most elements on the screen, including the cameras, lights, and mask.</li>
+    <li><strong>Mouse Cursor - </strong> Move the cursor to interact with buttons and objects.</li>
 </ul>
 
-<h3>Office Controls:</h3>
+<h3>Office Controls</h3>
 <ul>
-    <li><strong>Move Mouse Left/Right:</strong> Look to the left or right of the office.</li>
+    <li><strong>Move Mouse Left/Right - </strong> Look to the left or right of the office.</li>
     <li><strong>Ctrl</strong> (Control) Key (when looking left or right): Use the flashlight to illuminate the hallways.</li>
-    <li><strong>Space Bar:</strong> Use the flashlight in the main hallway.</li>
+    <li><strong>Space Bar - </strong> Use the flashlight in the main hallway.</li>
 </ul>
 
-<h3>Mask Controls:</h3>
+<h3>Mask Controls</h3>
 <ul>
     <li><strong>Ctrl</strong> (Control) Key (while looking forward): Use the Freddy Fazbear Head mask to hide from animatronics.</li>
-    <li><strong>Mouse Click:</strong> Click the mask icon at the bottom of the screen to quickly put on or take off the mask.</li>
+    <li><strong>Mouse Click - </strong> Click the mask icon at the bottom of the screen to quickly put on or take off the mask.</li>
 </ul>
 
-<h3>Camera System:</h3>
+<h3>Camera System</h3>
 <ul>
-    <li><strong>Mouse Click:</strong> Click on the monitor to open the camera system.</li>
-    <li><strong>Mouse Cursor:</strong> Move between camera feeds by clicking on the desired room/camera.</li>
-    <li><strong>Click the Left/Right Arrows:</strong> To switch between different camera feeds.</li>
+    <li><strong>Mouse Click - </strong> Click on the monitor to open the camera system.</li>
+    <li><strong>Mouse Cursor - </strong> Move between camera feeds by clicking on the desired room/camera.</li>
+    <li><strong>Click the Left/Right Arrows - </strong> To switch between different camera feeds.</li>
 </ul>
 
-<h3>Music Box:</h3>
+<h3>Music Box</h3>
 <ul>
-    <li><strong>Camera Feed (CAM 11):</strong> Click and hold the “Wind Up Music Box” button to wind up the music box. This is crucial for preventing the Puppet from attacking.</li>
+    <li><strong>Camera Feed (CAM 11) - </strong> Click and hold the “Wind Up Music Box” button to wind up the music box. This is crucial for preventing the Puppet from attacking.</li>
 </ul>
 
-<h3>Ventilation System:</h3>
+<h3>Ventilation System</h3>
 <ul>
-    <li><strong>Check Vent Cameras:</strong> To monitor the air vents on the sides of the office for animatronics.</li>
+    <li><strong>Check Vent Cameras - </strong> To monitor the air vents on the sides of the office for animatronics.</li>
 </ul>
 
-<h3>Tips:</h3>
+<h3>Tips</h3>
 <ul>
-    <li><strong>Monitor Power:</strong> There is no power limit like in the first game, but you need to manage the flashlight battery.</li>
-    <li><strong>Mask Quickly:</strong> Be fast when putting on the Freddy Fazbear Head if an animatronic is in the office.</li>
+    <li><strong>Monitor Power - </strong> There is no power limit like in the first game, but you need to manage the flashlight battery.</li>
+    <li><strong>Mask Quickly - </strong> Be fast when putting on the Freddy Fazbear Head if an animatronic is in the office.</li>
 </ul>
 
 
 <h2>Characters in Five Nights at Freddy's 2</h2>
 
-<h3>Main Animatronics:</h3>
+<h3>Main Animatronics</h3>
 <ul>
     <li>Toy Freddy</li>
     <li>Toy Bonnie</li>
@@ -167,7 +241,7 @@ The end of the game is very interesting there you put on a mask and around you a
     <li>The Puppet (Marionette)</li>
 </ul>
 
-<h3>Withered Animatronics:</h3>
+<h3>Withered Animatronics</h3>
 <ul>
     <li>Withered Freddy</li>
     <li>Withered Bonnie</li>
@@ -176,7 +250,9 @@ The end of the game is very interesting there you put on a mask and around you a
     <li>Withered Golden Freddy</li>
 </ul>
 
-<h3>Other Animatronics:</h3>
+
+
+<h3>Other Animatronics</h3>
 <ul>
     <li>Shadow Freddy</li>
     <li>Shadow Bonnie (RWQFSFASXC)</li>
@@ -186,6 +262,9 @@ The end of the game is very interesting there you put on a mask and around you a
 
 </div>
 </div>
+
+
+<div style="clear: both"></div>
 
 
 
